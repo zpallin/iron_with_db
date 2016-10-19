@@ -7,4 +7,5 @@ authors = ["zpallin <zpallin@gmail.com>"]
 iron = "*"
 router = "*"
 persistent = "*"
-
+mongodb = "*"
+bson = "*"
