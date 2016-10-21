@@ -6,6 +6,9 @@
 //! This module provides some tools for handling configuration input, 
 //! designed primarily with databases in mind.
 //!
+//! The DatabaseConfig struct, for example, is designed to accept a db conf
+//! string and then split it up for your use case.
+//!
 //! - zpallin
 //!
 
@@ -47,7 +50,7 @@ impl DatabaseConfig {
     }
 
     pub fn display(&self) {
-        
+
         println!(
             "DatabaseConfig {{\n    \
             dbname: {},\n    \
@@ -57,7 +60,7 @@ impl DatabaseConfig {
             self.dbname,
             self.hostname,
             self.port,
-        );
+            );
     }
 }
 
@@ -67,4 +70,6 @@ pub struct DatabaseConfigKey;
 impl Key for DatabaseConfigKey {
     type Value = DatabaseConfig;
 }
+
+pub mod tests;
 
