@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/zpallin/iron_with_db.svg?branch=master)](https://travis-ci.org/zpallin/iron_with_db)
+
 iron with db
 ============
 
