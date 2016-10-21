@@ -5,7 +5,12 @@ iron with db
 purpose
 -------
 
-A Rust Ironframework wrapper that incorporates a db connection manager, logging, as well as other configurations I feel are important for a full fleshed application.
+Iron with Db is an example, and launchpoint, for web application developers who want to write in rust but find some of the idioms of the language hard to understand. I am one of those developers, so hopefully others can follow in my footsteps to find easier times ahead.
+
+If you are reading this, you probably already understand why I am trying to write a webapp in rust. But just in case...
+
+Rust is a high performance, memory-safe language. I want to be able to write applications in this language (instead of alternatives like C++). Also, the language uses paradigms and syntax that is more common in newer, trendier, high level languages. Both of these aspects make the use of Rust for web development (among other things) very attractive to developers like me.
+
 
 development
 -----------
