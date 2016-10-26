@@ -17,11 +17,15 @@ extern crate iron;
 extern crate router;
 extern crate persistent;
 
-pub use iron::prelude::*;
-pub use iron::{BeforeMiddleware, AfterMiddleware, status};
-pub use iron::typemap::Key;
-pub use router::Router;
-pub use persistent::{Read};
-
+/// modules
 pub mod db;
+
+/// prelude for iron_with_db
+pub mod prelude {
+    pub use iron::prelude::*;
+    pub use iron::{BeforeMiddleware, AfterMiddleware, status};
+    pub use iron::typemap::Key;
+    pub use router::Router;
+    pub use persistent::{Read};
+}
 

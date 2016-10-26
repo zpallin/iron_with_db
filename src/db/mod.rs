@@ -12,7 +12,7 @@
 //! - zpallin
 //!
 
-use iron::typemap::Key;
+use prelude::*;
 
 pub struct DatabaseConfig {
 
