@@ -39,13 +39,16 @@ fn route_handler(req: &mut Request) -> IronResult<Response> {
     };
 
     // get the result from the db query
-    let result = coll.find_one(None, None).unwrap();
+    let mut cursor = coll.find(None, None).ok().expect("Couldn't Find");
 
-    if let Ok(item) = result {
-        if let Some(&Bson::String(ref query_str)) = item.get("query") {
-            println!("query: {}", query_str);
-        }
+    let item = cursor.next();
+
+    match item {
+        Some(Ok(x)) => println!("{:?}", x.get("title")),
+        Some(Err(_)) => panic!("Error getting data"),
+        None => println!("None!"),
     }
+    
     //  db_conf.display();
 
     Ok(Response::with((status::Ok, *query)))
