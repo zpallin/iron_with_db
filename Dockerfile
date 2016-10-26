@@ -1,4 +1,4 @@
-# nwdb_mongo image
+# iwdb_mongo image
 #   zpallin
 #   2016
 #
