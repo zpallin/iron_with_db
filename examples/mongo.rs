@@ -39,19 +39,25 @@ fn route_handler(req: &mut Request) -> IronResult<Response> {
     };
 
     // get the result from the db query
-    let mut cursor = coll.find(None, None).ok().expect("Couldn't Find");
+    let mut cursor = coll.find(Some(hit_counter_search), None).ok().expect("Couldn't Find");
 
     let item = cursor.next();
 
     match item {
-        Some(Ok(x)) => println!("{:?}", x.get("title")),
-        Some(Err(_)) => panic!("Error getting data"),
-        None => println!("None!"),
+        Some(Ok(x)) => {
+            let output = format!("{}: {}", x.get("title").unwrap(), *query);
+            return Ok(Response::with((status::Ok, output)));
+        },   
+        Some(Err(_)) => { 
+            return Ok(Response::with((status::Ok, "Error getting data")));
+        },
+        None => {
+            return Ok(Response::with((status::Ok, format!("{}: {}", "<NONE>", *query))));     
+        },
     }
     
     //  db_conf.display();
 
-    Ok(Response::with((status::Ok, *query)))
 }
 
 
