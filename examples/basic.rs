@@ -1,6 +1,4 @@
 
-#[macro_use(bson, doc)] extern crate bson;
-extern crate mongodb;
 extern crate iron_with_db;
 
 use iron_with_db::prelude::*;
