@@ -49,9 +49,9 @@ impl DatabaseConfig {
         }
     }
 
-    pub fn display(&self) {
+    pub fn display(&self) -> String {
 
-        println!(
+        format!(
             "DatabaseConfig {{\n    \
             dbname: {},\n    \
             hostname: {},\n    \
@@ -60,7 +60,7 @@ impl DatabaseConfig {
             self.dbname,
             self.hostname,
             self.port,
-            );
+        )
     }
 }
 

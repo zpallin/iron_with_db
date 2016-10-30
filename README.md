@@ -18,3 +18,7 @@ development
 -----------
 This project has just begin. Do not expect much.
 
+related projects
+----------------
+
+* [iron\_with\_mongo](https://github.com/zpallin/iron_with_mongo) - A plugin for iron\_with\_db that has sets you up for using mongodb.
