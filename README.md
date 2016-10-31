@@ -18,7 +18,19 @@ development
 -----------
 This project has just begin. Do not expect much.
 
+dockerfile
+----------
+If you want to launch this in docker, you know for the sake of testing code, I've provided an example dockerfile.
+
+To run it, make sure you install the latest version of docker (1.12.1 at time of writing) and do the following:
+
+1. `docker build . -t iwdb`
+2. `docker run -d -p 3000:3000 --name iwdb iwdb`
+
+Then, just visit localhost:3000 in your browser and you'll see the "basic" example running.
+
 related projects
 ----------------
 
 * [iron\_with\_mongo](https://github.com/zpallin/iron_with_mongo) - A plugin for iron\_with\_db that has sets you up for using mongodb.
+* [ironframework](https://github.com/iron/iron) - The core framework that is the basis for this one.
