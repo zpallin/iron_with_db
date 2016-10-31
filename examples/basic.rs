@@ -24,6 +24,6 @@ fn main() {
     let mut config = Chain::new(router);
     config.link(Read::<DatabaseConfigKey>::both(db_conf));
 
-    println!("Running app on localhost:3000");
+    println!("Running app on port 3000");
     Iron::new(config).http("localhost:3000").unwrap();
 }

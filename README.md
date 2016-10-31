@@ -22,3 +22,4 @@ related projects
 ----------------
 
 * [iron\_with\_mongo](https://github.com/zpallin/iron_with_mongo) - A plugin for iron\_with\_db that has sets you up for using mongodb.
+* [ironframework](https://github.com/iron/iron) - The core framework that is the basis for this one.
