@@ -14,6 +14,7 @@
 
 use prelude::*;
 
+#[derive(Debug)]
 pub struct DatabaseConfig {
 
     /// name of the database in the server

@@ -16,9 +16,11 @@
 extern crate iron;
 extern crate router;
 extern crate persistent;
+extern crate core;
 
 /// modules
 pub mod db;
+pub mod model;
 
 /// prelude for iron_with_db
 pub mod prelude {
