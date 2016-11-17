@@ -17,6 +17,7 @@ extern crate iron;
 extern crate router;
 extern crate persistent;
 extern crate core;
+extern crate rustc_serialize;
 
 /// modules
 pub mod db;
